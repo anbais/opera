@@ -148,7 +148,7 @@ header{
 }
 
 .people_photo_container{
-  opacity: 50%;
+  opacity: 80%;
   position: relative;
   margin-bottom: -4px;
   background: linear-gradient(to bottom, black, 20%, transparent), linear-gradient(to top, black, 30%, transparent), url("../images/background/ermek.jpeg");

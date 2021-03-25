@@ -9,23 +9,27 @@ h1{
   font-size: 15pt;
   margin-top: -8px;
   margin-left: 20px;
-  width: 80px;
+  width: 90px;
   text-align: center;
   font-family: "Special Elite", sans-serif;
   background-color: black;
   color: #E4C580;
 }
 
+.abay h2{
+  width: 60px;
+}
+
 .composers h2, .kyz_zhibek h2{
   width: 120px;
 }
 
-.opera_houses h2, .birzhan_sara h2, .astana_opera h2{
+.opera_houses h2, .astana_opera h2{
   width: 150px;
 }
 
-.ksatob h2{
-  width: 330px;
+.birzhan_sara h2{
+  width: 160px;
 }
 
 .main_page_content p, .operas_page_content p, .people_page_content p, .houses_page_content p{
