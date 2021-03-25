@@ -1,0 +1,111 @@
+h1{
+  font-size: 20pt;
+  text-align: center;
+  line-height: 2;
+  font-family: "Poiret One", sans-serif;
+}
+
+.main_page_content h2, .operas_page_content h2, .people_page_content h2, .houses_page_content h2{
+  font-size: 15pt;
+  margin-top: -8px;
+  margin-left: 20px;
+  width: 80px;
+  text-align: center;
+  font-family: "Special Elite", sans-serif;
+  background-color: black;
+  color: #E4C580;
+}
+
+.composers h2, .kyz_zhibek h2{
+  width: 120px;
+}
+
+.opera_houses h2, .birzhan_sara h2, .astana_opera h2{
+  width: 150px;
+}
+
+.ksatob h2{
+  width: 330px;
+}
+
+.main_page_content p, .operas_page_content p, .people_page_content p, .houses_page_content p{
+  margin: 20px 20px;
+  font-size: 0.8em;
+}
+
+.people_page_content .name{
+  color: #E4C580;
+  font-size: 1.2em;
+  margin-top: 25%;
+  font-weight: bold;
+}
+
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid white;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.main_page_content button, .operas_page_content button{
+  width: 150px;
+  height: 50px;
+  border: 0;
+  display: block;
+  margin: 5% auto;
+  border-radius: 50px;
+  background: #E4C580;
+  color: black;
+  font-size: 15pt;
+  font-family: "Poiret One", sans-serif;
+}
+
+.nav_links{
+  width:100%;
+}
+
+.nav_item a{
+  color: white;
+  text-decoration: none;
+}
+
+.nav_item a:hover, a:focus{
+  color: #E4C580;
+  text-decoration: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+}
+
+
+@media screen and (min-width: 850px){
+  .big_card{
+    -webkit-transform: scaleX(1.12);
+            transform: scaleX(1.12);
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+}

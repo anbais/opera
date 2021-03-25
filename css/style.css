@@ -1,0 +1,348 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16pt;
+  font-family: "Poiret One", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  height: 50px;
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 500px;
+  flex-wrap: nowrap;
+  color: white;
+  font-family: "Poiret One", sans-serif;
+  font-size: 12pt;
+}
+
+.nav_item{
+  padding: 15px;
+}
+
+.nav_item.active{
+  background-color: #E4C580;
+}
+
+.nav_item.active a{
+  color: black;
+  text-decoration: underline;
+}
+
+.main_photo_container{
+  opacity: 100%;
+  position: relative;
+  margin-bottom: -4px;
+  background: linear-gradient(to bottom, black, 20%, transparent), linear-gradient(to top, black, 30%, transparent), url("../images/background/abai.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  width: 100%;
+}
+
+.mainheader{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 25pt;
+  width: 80%;
+  color: #E4C580;
+  font-family: "Special Elite", sans-serif;
+}
+
+.main_page_content div{
+  margin-top: 60px;
+  border-top: white 1px solid;
+}
+
+.main_page_content img, .operas_page_content img, .houses_page_content img{
+  opacity: 60%;
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  border-radius: 7px;
+  /* border: 1px white solid; */
+  max-width: 90%;
+}
+
+.operas_photo_container{
+  opacity: 60%;
+  position: relative;
+  margin-bottom: -4px;
+  background: linear-gradient(to bottom, black, 20%, transparent), linear-gradient(to top, black, 30%, transparent), url("../images/background/birzhan_sara.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  width: 100%;
+}
+
+.operas_page_content .section, .people_page_content .section, .houses_page_content .section{
+  margin-top: 60px;
+  border-top: white 1px solid;
+}
+
+.slideshow-container img{
+  opacity: 100%;
+  vertical-align: middle;
+  height: 100%;
+  border: 1px white solid;
+}
+
+.slideshow-container{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -8%;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  user-select: none;
+  /* background-color: grey;
+  opacity: 30%; */
+}
+
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: 5%;
+}
+
+.prev{
+  left: 0;
+  border-radius: 0 3px 3px 0;
+  margin-left: 5%;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover{
+  background-color: #E4C580;
+  color: black;
+}
+
+.slide_text{
+  margin-left: 1000px;
+}
+
+.people_photo_container{
+  opacity: 50%;
+  position: relative;
+  margin-bottom: -4px;
+  background: linear-gradient(to bottom, black, 20%, transparent), linear-gradient(to top, black, 30%, transparent), url("../images/background/ermek.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  width: 100%;
+}
+
+.peopleheader{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 25pt;
+  width: 80%;
+  color: #E4C580;
+  font-family: "Special Elite", sans-serif;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 15px;
+  grid-row-gap: 30px;
+}
+
+.artist_info {
+  text-align: center;
+  /* background: grey; */
+  border: 1px white solid;
+}
+
+.photo_kulyash {
+  grid-column: 1/span 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.photo_ermek {
+  grid-column: 2/span 1;
+  /* grid-row: 2/span 1; */
+  width: 100%;
+  overflow: hidden;
+}
+
+.photo_bibigul {
+  grid-column: 1/span 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+#kulyash_bayseitova{
+  grid-row: 1/span 1;
+  grid-column: 2/ span 1;
+}
+
+#ermek_serkebayev{
+  grid-row: 2/span 1;
+  grid-column: 1/ span 1;
+}
+
+#bibigul_tulegenova{
+  grid-row: 3/span 1;
+  grid-column: 2/ span 1;
+}
+
+.photo_yevgeny {
+  grid-column: 2/span 1;
+  grid-row: 1/ span 1;
+  width: 100%;
+}
+
+.photo_mukan {
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+  width: 100%;
+}
+
+.photo_akhmet {
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+  width: 100%;
+}
+
+#yevgeny_brusilovsky{
+  grid-row: 1/span 1;
+  grid-column: 1/ span 1;
+}
+
+#mukan_tulebayev{
+  grid-row: 2/span 1;
+  grid-column: 2/span 1;
+}
+
+#akhmet_zhubanov{
+  grid-row: 3/span 1;
+  grid-column: 1/ span 1;
+}
+
+
+.houses_photo_container{
+  opacity: 70%;
+  position: relative;
+  margin-bottom: -4px;
+  background: linear-gradient(to bottom, black, 20%, transparent), linear-gradient(to top, black, 30%, transparent), url("../images/background/kyz_zhibek.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 700px;
+  width: 100%;
+}
+
+.flip_card_ksatob{
+  opacity: 60%;
+  position: relative;
+  background: url("../images/houses/ksatob_front.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 7px;
+  max-width: 90%;
+}
+
+.flip_card_ksatob:hover{
+  opacity: 60%;
+  position: relative;
+  background: url("../images/houses/ksatob_back.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 200px;
+  transition: 0.6s;
+  margin: 20px auto;
+  border-radius: 7px;
+  max-width: 90%;
+}
+
+.flip_card_astana{
+  opacity: 60%;
+  position: relative;
+  background: url("../images/houses/astana_front.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 7px;
+  max-width: 90%;
+}
+
+.flip_card_astana:hover{
+  opacity: 60%;
+  position: relative;
+  background: url("../images/houses/astana_back.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  transition: 0.6s;
+  margin: 20px auto;
+  border-radius: 7px;
+  max-width: 90%;
+}
+
+@media screen and (min-width: 850px){
+
+  header{
+    flex-direction: row;
+    align-items: left;
+    justify-content: flex-end;
+  }
+
+  .nav_links{
+    flex-direction: row;
+  }
+
+  .mainheader{
+    font-size: 40pt;
+  }
+
+  .package {
+    flex-basis: 230px;
+  }
+
+
+  .main_page_content img{
+    width: 810px;
+    height: 518px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  #logo{
+    animation: none;
+  }
+}
