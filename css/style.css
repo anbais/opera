@@ -79,7 +79,7 @@ header{
 }
 
 .operas_photo_container{
-  opacity: 60%;
+  opacity: 70%;
   position: relative;
   margin-bottom: -4px;
   background: linear-gradient(to bottom, black, 20%, transparent), linear-gradient(to top, black, 30%, transparent), url("../images/background/birzhan_sara.jpeg");
@@ -116,13 +116,12 @@ header{
   width: auto;
   padding: 16px;
   margin-top: -8%;
-  color: white;
   font-weight: bold;
   font-size: 50px;
   transition: 0.6s ease;
   user-select: none;
-  /* background-color: grey;
-  opacity: 30%; */
+  background-color: #E4C580;
+  color: black;
 }
 
 .next{
@@ -137,18 +136,12 @@ header{
   margin-left: 5%;
 }
 
-/* On hover, add a grey background color */
-.prev:hover, .next:hover{
-  background-color: #E4C580;
-  color: black;
-}
-
 .slide_text{
   margin-left: 1000px;
 }
 
 .people_photo_container{
-  opacity: 80%;
+  opacity: 70%;
   position: relative;
   margin-bottom: -4px;
   background: linear-gradient(to bottom, black, 20%, transparent), linear-gradient(to top, black, 30%, transparent), url("../images/background/ermek.jpeg");
@@ -253,7 +246,7 @@ header{
 
 
 .houses_photo_container{
-  opacity: 70%;
+  opacity: 90%;
   position: relative;
   margin-bottom: -4px;
   background: linear-gradient(to bottom, black, 20%, transparent), linear-gradient(to top, black, 30%, transparent), url("../images/background/kyz_zhibek.jpeg");
@@ -330,6 +323,10 @@ header{
     font-size: 40pt;
   }
 
+  .peopleheader{
+    font-size: 40pt;
+  }
+
   .package {
     flex-basis: 230px;
   }
@@ -341,8 +338,8 @@ header{
   }
 }
 
-@media (prefers-reduced-motion: reduce){
-  #logo{
-    animation: none;
+@media screen and (max-width: 370px){
+  .nav_item{
+    padding: 10px;
   }
 }
