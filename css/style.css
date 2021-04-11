@@ -393,7 +393,6 @@ hr{
 
   header{
     flex-direction: row;
-    align-items: left;
   }
 
   .nav_item a{
