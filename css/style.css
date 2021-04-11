@@ -1,6 +1,4 @@
 body{
-  margin: 0;
-  padding: 0;
   font-size: 16pt;
   font-family: "Poiret One", sans-serif;
   background-color: black;
@@ -16,7 +14,13 @@ header{
   height: 50px;
 }
 
+.nav_item a{
+  color: white;
+  text-decoration: none;
+}
+
 .nav_links{
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-basis: 500px;
@@ -37,6 +41,95 @@ header{
 .nav_item.active a{
   color: black;
   text-decoration: underline;
+}
+
+.nav_item a:hover, a:focus{
+  color: #E4C580;
+  text-decoration: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+}
+
+.main_page_content h2, .operas_page_content h2, .people_page_content h2, .houses_page_content h2{
+  font-size: 15pt;
+  margin-top: -8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90px;
+  text-align: center;
+  font-family: "Special Elite", sans-serif;
+  background-color: black;
+  color: #E4C580;
+}
+
+.abay h2{
+  width: 60px;
+}
+
+.composers h2, .kyz_zhibek h2{
+  width: 120px;
+}
+
+#main_page_houses h2, .astana_opera h2{
+  width: 150px;
+}
+
+.birzhan_sara h2{
+  width: 160px;
+}
+
+.main_page_content p, .operas_page_content p, .people_page_content p, .houses_page_content p{
+  margin: 20px 20px;
+  font-size: 0.8em;
+}
+
+.people_page_content .name{
+  color: #E4C580;
+  font-size: 1.2em;
+  margin-top: 25%;
+  font-weight: bold;
+}
+
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top: 20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid white;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.main_page_content button, .operas_page_content button{
+  width: 150px;
+  height: 50px;
+  border: 0;
+  display: block;
+  margin: 5% auto;
+  border-radius: 50px;
+  background: #E4C580;
+  color: black;
+  font-size: 15pt;
+  font-family: "Poiret One", sans-serif;
 }
 
 .main_photo_container{
@@ -63,8 +156,22 @@ header{
   font-family: "Special Elite", sans-serif;
 }
 
+.subtitle_big_margin{
+  text-align: center;
+  font-size: 15pt;
+  display: block;
+  margin: 50px 30px;
+}
+
+.subtitle_small_margin{
+  text-align: center;
+  font-size: 15pt;
+  display: block;
+  margin: 10px 30px;
+}
+
 .main_page_content div{
-  margin-top: 60px;
+  margin-top: 40px;
   border-top: white 1px solid;
 }
 
@@ -74,7 +181,6 @@ header{
   display: block;
   margin: 20px auto;
   border-radius: 7px;
-  /* border: 1px white solid; */
   max-width: 90%;
 }
 
@@ -91,18 +197,19 @@ header{
 }
 
 .operas_page_content .section, .people_page_content .section, .houses_page_content .section{
-  margin-top: 60px;
+  margin-top: 40px;
   border-top: white 1px solid;
 }
 
-.slideshow-container img{
+.slideshow_container img{
   opacity: 100%;
   vertical-align: middle;
   height: 100%;
   border: 1px white solid;
+  width: 100%
 }
 
-.slideshow-container{
+.slideshow_container{
   max-width: 1000px;
   position: relative;
   margin: auto;
@@ -164,7 +271,7 @@ header{
   font-family: "Special Elite", sans-serif;
 }
 
-.grid{
+.grid_people{
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 15px;
@@ -173,77 +280,41 @@ header{
 
 .artist_info {
   text-align: center;
-  /* background: grey; */
   border: 1px white solid;
 }
 
-.photo_kulyash {
+.photo_kulyash, #ermek_serkebayev, .photo_bibigul, #roza_zhamanova, .photo_yevgeny, #mukan_tulebayev, .photo_akhmet, #latif_khamidi{
   grid-column: 1/span 1;
-  width: 100%;
-  overflow: hidden;
 }
 
-.photo_ermek {
+#kulyash_bayseitova, .photo_ermek, #bibigul_tulegenova, .photo_roza, #yevgeny_brusilovsky, .photo_mukan, #akhmet_zhubanov, .photo_latif{
   grid-column: 2/span 1;
-  /* grid-row: 2/span 1; */
-  width: 100%;
-  overflow: hidden;
 }
 
-.photo_bibigul {
-  grid-column: 1/span 1;
-  width: 100%;
-  overflow: hidden;
-}
-
-#kulyash_bayseitova{
+.photo_kulyash, #kulyash_bayseitova, .photo_yevgeny, #yevgeny_brusilovsky{
   grid-row: 1/span 1;
-  grid-column: 2/ span 1;
 }
 
-#ermek_serkebayev{
+.photo_ermek, #ermek_serkebayev, .photo_mukan, #mukan_tulebayev{
   grid-row: 2/span 1;
-  grid-column: 1/ span 1;
 }
 
-#bibigul_tulegenova{
+.photo_bibigul, #bibigul_tulegenova, .photo_akhmet, #akhmet_zhubanov{
   grid-row: 3/span 1;
-  grid-column: 2/ span 1;
 }
 
-.photo_yevgeny {
-  grid-column: 2/span 1;
-  grid-row: 1/ span 1;
+.photo_roza, #roza_zhamanova, .photo_latif, #latif_khamidi{
+  grid-row: 4/span 1;
+}
+
+.photo_kulyash, .photo_ermek, .photo_bibigul, .photo_roza, .photo_yevgeny, .photo_mukan, .photo_akhmet, .photo_latif {
   width: 100%;
+  overflow: hidden;
 }
 
-.photo_mukan {
-  grid-column: 1/span 1;
-  grid-row: 2/span 1;
-  width: 100%;
+.people_page_content img{
+  border: 1px white solid;
 }
-
-.photo_akhmet {
-  grid-column: 2/span 1;
-  grid-row: 3/span 1;
-  width: 100%;
-}
-
-#yevgeny_brusilovsky{
-  grid-row: 1/span 1;
-  grid-column: 1/ span 1;
-}
-
-#mukan_tulebayev{
-  grid-row: 2/span 1;
-  grid-column: 2/span 1;
-}
-
-#akhmet_zhubanov{
-  grid-row: 3/span 1;
-  grid-column: 1/ span 1;
-}
-
 
 .houses_photo_container{
   opacity: 90%;
@@ -267,6 +338,7 @@ header{
   margin: 20px auto;
   border-radius: 7px;
   max-width: 90%;
+  border: 1px white solid;
 }
 
 .flip_card_ksatob:hover{
@@ -292,6 +364,7 @@ header{
   margin: 20px auto;
   border-radius: 7px;
   max-width: 90%;
+  border: 1px white solid;
 }
 
 .flip_card_astana:hover{
@@ -307,7 +380,188 @@ header{
   max-width: 90%;
 }
 
-@media screen and (min-width: 850px){
+hr{
+  height: 5px;
+  border-width: 1px;
+  color: white;
+  background-color: black;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 700px){
+
+  header{
+    flex-direction: row;
+    align-items: left;
+  }
+
+  .nav_item a{
+    font-size: 1.3em;
+    padding: 20px;
+  }
+
+  .mainheader, .peopleheader{
+    font-size: 40pt;
+  }
+
+  .main_page_content img{
+    max-width: 90%;
+  }
+
+  h2{
+    width: auto;
+    margin-left: auto !IMPORTANT;
+    margin-right: auto !IMPORTANT;
+  }
+
+  .grid_people{
+    grid-template-columns: 1fr 1fr 0.1fr 1fr 1fr;
+    margin: 15px 5%;
+  }
+
+  .photo_kulyash, #kulyash_bayseitova, .photo_ermek, #ermek_serkebayev, .photo_yevgeny, #yevgeny_brusilovsky, .photo_mukan, #mukan_tulebayev{
+    grid-row: 1/span 1;
+  }
+
+  .photo_bibigul, #bibigul_tulegenova, .photo_roza, #roza_zhamanova, .photo_akhmet, #akhmet_zhubanov, .photo_latif, #latif_khamidi{
+    grid-row: 2/span 1;
+  }
+
+  .photo_kulyash, #bibigul_tulegenova, .photo_yevgeny, #akhmet_zhubanov{
+    grid-column: 1/span 1;
+  }
+
+  .photo_bibigul, #kulyash_bayseitova, #yevgeny_brusilovsky, .photo_akhmet{
+    grid-column: 2/span 1;
+  }
+
+  .photo_ermek, #roza_zhamanova, .photo_mukan, #latif_khamidi{
+    grid-column: 4/span 1;
+  }
+
+  .photo_roza, #ermek_serkebayev, #mukan_tulebayev, .photo_latif{
+    grid-column: 5/span 1;
+  }
+
+  .people_page_content .name{
+    font-size: 1em;
+    margin-top: 10%;
+  }
+
+  .people_page_content p{
+    margin: 10px 20px;
+  }
+
+  .grid_main{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 2% 5%;
+  }
+
+  #main_page_operas p, #main_page_people p, #main_page_houses p{
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    text-align: center;
+    margin-top: 40%;
+    margin-bottom: 10%;
+  }
+
+  .grid_main button{
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    margin-top: 10%;
+  }
+
+  #main_page_operas img, #main_page_people img, #main_page_houses img{
+    grid-column: 3/span 1;
+    grid-row: 1/span 2;
+    max-width: 100%;
+    overflow: hidden;
+    border: 2px white solid;
+  }
+
+  .grid_operas{
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    margin: 2% 5%;
+    grid-column-gap: 1px;
+  }
+
+  .slideshow_container{
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .main_info_operas{
+    grid-column: 1/span 2;
+    grid-row: 1/span 1;
+    text-align: center;
+    margin: 0%  1% !IMPORTANT;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide_text{
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+    margin: 5%  1% !IMPORTANT;
+    display: flex;
+    align-items: center;
+  }
+
+  .grid_houses{
+    display: grid;
+    grid-template-columns: 4fr 0.1fr 4fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    margin: 2% 5%;
+    grid-column-gap: 1px;
+  }
+
+  .flipcard{
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .grid_houses .house_name{
+    grid-column: 1/span 3;
+    grid-row: 1/span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid_houses .house_description{
+    grid-column: 3/span 1;
+    grid-row: 2/span 1;
+    display: flex;
+    align-items: center;
+    margin: 0% !IMPORTANT;
+  }
+
+  .grid_houses .house_extra{
+    grid-column: 1/span 1;
+    grid-row: 3/span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip_card_astana, .flip_card_ksatob{
+    margin: auto !IMPORTANT;
+  }
+}
+
+@media screen and (min-width: 1000px){
 
   header{
     flex-direction: row;
@@ -315,31 +569,21 @@ header{
     justify-content: flex-end;
   }
 
-  .nav_links{
-    flex-direction: row;
+  .nav_item a{
+    font-size: 1.5em;
+    padding: 10px;
   }
 
-  .mainheader{
+  .mainheader, .peopleheader{
     font-size: 40pt;
   }
-
-  .peopleheader{
-    font-size: 40pt;
-  }
-
-  .package {
-    flex-basis: 230px;
-  }
-
 
   .main_page_content img{
-    width: 810px;
-    height: 518px;
+    max-width: 90%;
   }
-}
 
-@media screen and (max-width: 370px){
-  .nav_item{
-    padding: 10px;
+  .people_page_content .name{
+    font-size: 1em;
+    margin-top: 25%;
   }
 }
